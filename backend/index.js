@@ -4,6 +4,8 @@ import cors from 'cors'
 import userRoutes from './routes/userRoutes.js'
 import orderRoutes from './routes/orderRoutes.js'
 import productRoutes from './routes/productRoutes.js'
+import cartRoutes from './routes/cartRoutes.js'
+import categoryRoutes from './routes/categoryRoutes.js'
 
 import connectDB from './config/db.js';
 
@@ -23,6 +25,8 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
+app.use('/api/cart', cartRoutes);
+app.use('/api/categories', categoryRoutes);
 
 // Error Handling Middleware
 app.use(errorMiddleware);
